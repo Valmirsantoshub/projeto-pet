@@ -6,6 +6,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+    --color1: #FFD700;
+    --color2: #f9f9f9;
+    --color3: #FF69B4;
+    --color4: #0a0303;
+    --color5: #ff5722;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +26,10 @@ header {
     text-align: center;
     font-size: 1.5em;
     font-weight: bold;
-    background-color: #FFD700;
+    /* background-color: #FFD700; */
+    background-image: linear-gradient(to right, #FFD700, #FF69B4);
+   
+
 }
 
 /* Header Container */
@@ -28,8 +38,11 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    background-color: #FFD700;
+    background-color: #FFD700; 
     padding: 1em;
+    background-image: linear-gradient(to right, #FFD700, #FF69B4);
+   
+   
 }
 
 .logo img {
@@ -47,6 +60,7 @@ header {
     gap: 2em;
     padding: 2em;
     background-color: #f9f9f9;
+    
 }
 
 .menu-item {
@@ -65,8 +79,10 @@ header {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border-radius: 50%;
+    /* border-radius: 80%; */
+    cursor: pointer;
 }
+
 
 .menu-item h3 {
     margin: 0;
@@ -94,6 +110,11 @@ header {
     align-items: center;
     background-color: #FFD700;
     padding: 1em;
+    background-image: linear-gradient(to right, #FFD700, #FF69B4);
+    position: sticky; 
+    top: 0;
+    z-index: 100; /* Um valor alto para garantir que o h1 fique acima */
+    padding: 10px;
 }
 
 .conteudo div {
@@ -107,6 +128,7 @@ header {
     padding: 10px 20px;
     border-radius: 5px;
     transition: color 0.3s, background-color 0.3s;
+    
 }
 
 .conteudo a:hover {
@@ -155,7 +177,7 @@ footer {
 /* Redes Sociais */
 .redes-sociais {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 1em;
     padding: 1em; 
     background-color: #333333;
@@ -169,6 +191,9 @@ footer {
 }
 
 .redes img {
+    display: flex;
+    align-items: center;
+   
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -178,7 +203,6 @@ footer {
 .redes img:hover {
     transform: scale(1.2);
 }
-
 /* Responsividade */
 @media (max-width: 768px) {
     h1 {
@@ -203,7 +227,10 @@ footer {
     .menu {
         gap: 1em;
     }
-}
+    
+    
+    }
+
 
 @media (max-width: 480px) {
     h1 {
@@ -223,4 +250,42 @@ footer {
         width: 25px;
         height: 25px;
     }
+    
+   
 }
+
+.whatsapp-button .cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -10px; 
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.menu-foto { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    }
+    .menu-foto img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    /* border-radius: 50%; */
+    cursor: pointer;
+    }
+
